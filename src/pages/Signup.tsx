@@ -10,13 +10,10 @@ const Signup = () => {
         <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <div className="relative h-8 w-8 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-4 h-4 bg-primary rounded-full"></div>
-              </div>
-              <div className="absolute inset-0 border-2 border-primary rounded-full"></div>
+              <img src="/lg.png" alt="CryptoSentinel Logo" className="h-full w-full object-contain" />
             </div>
             <span className="text-xl font-bold">
-              Stock<span className="text-primary">Guard</span>
+              Crypto<span className="text-primary">Sentinel</span>
             </span>
           </Link>
 
@@ -41,7 +38,7 @@ const Signup = () => {
       {/* Footer */}
       <footer className="py-4 px-6 border-t border-white/10 text-center">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} StockGuard. All rights reserved.
+          &copy; {new Date().getFullYear()} CryptoSentinel. All rights reserved.
         </p>
       </footer>
     </div>

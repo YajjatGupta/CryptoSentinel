@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Check for saved user on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('stockguard_user');
+    const savedUser = localStorage.getItem('cryptosentinel_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
@@ -66,7 +66,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       };
       
       // Save user to localStorage
-      localStorage.setItem('stockguard_user', JSON.stringify(mockUser));
+      localStorage.setItem('cryptosentinel_user', JSON.stringify(mockUser));
       setUser(mockUser);
       
       return Promise.resolve();
@@ -96,7 +96,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       };
       
       // Save user to localStorage
-      localStorage.setItem('stockguard_user', JSON.stringify(newUser));
+      localStorage.setItem('cryptosentinel_user', JSON.stringify(newUser));
       setUser(newUser);
       
       return Promise.resolve();
@@ -109,7 +109,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Logout function
   const logout = () => {
-    localStorage.removeItem('stockguard_user');
+    localStorage.removeItem('cryptosentinel_user');
     setUser(null);
   };
 

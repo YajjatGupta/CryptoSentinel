@@ -40,7 +40,7 @@ const ContactPage = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have questions about StockGuard? Our team is here to help. 
+              Have questions about CryptoSentinel? Our team is here to help. 
               Reach out to us and we'll get back to you as soon as possible.
             </p>
           </div>
@@ -142,8 +142,8 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-medium">Email Us</h3>
                       <p className="text-muted-foreground">
-                        <Link to="mailto:support@stockguard.com" className="hover:text-primary">
-                          support@stockguard.com
+                        <Link to="mailto:support@cryptosentinel.dev" className="hover:text-primary">
+                          support@cryptosentinel.dev
                         </Link>
                       </p>
                     </div>
@@ -181,14 +181,14 @@ const ContactPage = () => {
                 <h3 className="text-xl font-bold mb-4">Frequently Asked Questions</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium">How does StockGuard detect fraud?</h4>
+                    <h4 className="font-medium">How does CryptoSentinel detect fraud?</h4>
                     <p className="text-sm text-muted-foreground">
-                      StockGuard uses advanced AI algorithms to analyze trading patterns and detect anomalies that may indicate fraudulent activity.
+                      CryptoSentinel uses AI models to analyze trading patterns and detect anomalies that may indicate manipulation.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium">Is my data secure with StockGuard?</h4>
+                    <h4 className="font-medium">Is my data secure with CryptoSentinel?</h4>
                     <p className="text-sm text-muted-foreground">
                       Yes, we employ end-to-end encryption and follow industry-best security practices to ensure your data remains protected.
                     </p>

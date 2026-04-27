@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import AuthForm from '@/components/auth/AuthForm';
+import React from "react";
+import { Link } from "react-router-dom";
+import AuthForm from "@/components/auth/AuthForm";
 
 const Login = () => {
   return (
@@ -11,35 +10,35 @@ const Login = () => {
         <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <div className="relative h-8 w-8 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-4 h-4 bg-primary rounded-full"></div>
-              </div>
-              <div className="absolute inset-0 border-2 border-primary rounded-full"></div>
+              <img src="/lg.png" alt="CryptoSentinel Logo" className="h-full w-full object-contain" />
             </div>
             <span className="text-xl font-bold">
-              Stock<span className="text-primary">Guard</span>
+              Crypto<span className="text-primary">Sentinel</span>
             </span>
           </Link>
-          
+
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/signup" className="text-sm text-muted-foreground hover:text-primary">
+            <Link
+              to="/signup"
+              className="text-sm text-muted-foreground hover:text-primary"
+            >
               Don't have an account?
             </Link>
           </div>
         </div>
       </header>
-      
+
       {/* Main content */}
       <main className="flex-1 flex items-center justify-center p-6">
         <div className="w-full max-w-md">
           <AuthForm defaultMode="login" />
         </div>
       </main>
-      
+
       {/* Footer */}
       <footer className="py-4 px-6 border-t border-white/10 text-center">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} StockGuard. All rights reserved.
+          &copy; {new Date().getFullYear()} CryptoSentinel. All rights reserved.
         </p>
       </footer>
     </div>

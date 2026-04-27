@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
@@ -17,11 +16,11 @@ const Pricing = () => {
         monthly: 0,
         annual: 0
       },
-      description: 'Basic protection for casual investors',
+      description: 'Basic protection for casual traders',
       features: [
-        { included: true, text: 'Basic fraud detection' },
+        { included: true, text: 'Basic on-chain fraud detection' },
         { included: true, text: '1 day delayed alerts' },
-        { included: true, text: 'Monitor up to 5 stocks' },
+        { included: true, text: 'Monitor up to 5 wallets' },
         { included: false, text: 'Real-time alerts' },
         { included: false, text: 'Sentiment analysis' },
         { included: false, text: 'Historical data access' },
@@ -38,9 +37,9 @@ const Pricing = () => {
       },
       description: 'Advanced protection for serious investors',
       features: [
-        { included: true, text: 'Advanced fraud detection' },
+        { included: true, text: 'Advanced on-chain fraud detection' },
         { included: true, text: 'Real-time alerts' },
-        { included: true, text: 'Monitor up to 50 stocks' },
+        { included: true, text: 'Monitor up to 50 wallets' },
         { included: true, text: 'Sentiment analysis' },
         { included: true, text: 'Historical data (3 months)' },
         { included: false, text: 'API access' },
@@ -57,9 +56,9 @@ const Pricing = () => {
       },
       description: 'Ultimate protection for professional traders',
       features: [
-        { included: true, text: 'Premium fraud detection' },
+        { included: true, text: 'Premium on-chain fraud detection' },
         { included: true, text: 'Priority real-time alerts' },
-        { included: true, text: 'Unlimited stock monitoring' },
+        { included: true, text: 'Unlimited wallet monitoring' },
         { included: true, text: 'Advanced sentiment analysis' },
         { included: true, text: 'Full historical data access' },
         { included: true, text: 'API access' },
@@ -85,7 +84,7 @@ const Pricing = () => {
               Simple, Transparent <span className="text-gradient">Pricing</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10">
-              Choose the plan that fits your investment strategy. All plans come with a 14-day free trial.
+              Choose the plan that fits your Web3 investment strategy. All plans come with a 14-day free trial.
             </p>
             
             {/* Billing Toggle */}
@@ -218,7 +217,7 @@ const Pricing = () => {
               Ready to protect your investments?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join thousands of investors who trust StockGuard to keep their portfolios safe from fraud.
+              Join thousands of investors who trust CryptoSentinel to keep their portfolios safe from fraud.
             </p>
             <Link to="/signup">
               <Button size="lg">Get Started Now</Button>

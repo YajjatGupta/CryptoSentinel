@@ -30,42 +30,42 @@ export const FraudAlerts: React.FC<FraudAlertsProps> = ({
 }) => {
   // Sample data if not provided
   const defaultAlerts: FraudAlert[] = [
-    {
-      id: 'alert-1',
-      stock: 'TSLA',
-      type: 'pump_dump',
-      riskLevel: 'high',
-      timestamp: '10 minutes ago',
-      change: 5.7,
-      confidence: 92
-    },
-    {
-      id: 'alert-2',
-      stock: 'NVDA',
-      type: 'insider_trading',
-      riskLevel: 'medium',
-      timestamp: '45 minutes ago',
-      change: 2.3,
-      confidence: 78
-    },
-    {
-      id: 'alert-3',
-      stock: 'AAPL',
-      type: 'spoofing',
-      riskLevel: 'low',
-      timestamp: '2 hours ago',
-      change: 0.8,
-      confidence: 65
-    },
-    {
-      id: 'alert-4',
-      stock: 'GOOG',
-      type: 'wash_trading',
-      riskLevel: 'medium',
-      timestamp: '3 hours ago',
-      change: 1.6,
-      confidence: 81
-    }
+    // {
+    //   id: 'alert-1',
+    //   stock: 'TSLA',
+    //   type: 'pump_dump',
+    //   riskLevel: 'high',
+    //   timestamp: '10 minutes ago',
+    //   change: 5.7,
+    //   confidence: 92
+    // },
+    // {
+    //   id: 'alert-2',
+    //   stock: 'NVDA',
+    //   type: 'insider_trading',
+    //   riskLevel: 'medium',
+    //   timestamp: '45 minutes ago',
+    //   change: 2.3,
+    //   confidence: 78
+    // },
+    // {
+    //   id: 'alert-3',
+    //   stock: 'AAPL',
+    //   type: 'spoofing',
+    //   riskLevel: 'low',
+    //   timestamp: '2 hours ago',
+    //   change: 0.8,
+    //   confidence: 65
+    // },
+    // {
+    //   id: 'alert-4',
+    //   stock: 'GOOG',
+    //   type: 'wash_trading',
+    //   riskLevel: 'medium',
+    //   timestamp: '3 hours ago',
+    //   change: 1.6,
+    //   confidence: 81
+    // }
   ];
 
   const alerts = externalAlerts || defaultAlerts;

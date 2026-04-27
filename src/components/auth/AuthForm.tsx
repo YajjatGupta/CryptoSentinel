@@ -65,7 +65,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ defaultMode = 'login' }) => {
       await login(data.email, data.password);
       toast({
         title: "Login successful!",
-        description: "Welcome back to StockGuard",
+        description: "Welcome back to CryptoSentinel",
       });
       navigate('/dashboard');
     } catch (error) {
@@ -82,7 +82,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ defaultMode = 'login' }) => {
       await signup(data.name, data.email, data.password);
       toast({
         title: "Account created!",
-        description: "Welcome to StockGuard",
+        description: "Welcome to CryptoSentinel",
       });
       navigate('/dashboard');
     } catch (error) {
@@ -105,7 +105,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ defaultMode = 'login' }) => {
         <p className="text-muted-foreground mt-2">
           {mode === 'login' 
             ? 'Enter your credentials to access your account' 
-            : 'Join StockGuard to protect your investments'}
+            : 'Join CryptoSentinel to protect your investments'}
         </p>
       </div>
 
