@@ -211,10 +211,9 @@ npm run preview
 
 ## Team
 
-- Shubham Tandon - Roll No. e23cseu1730
-- Vihag Chaturvedi - Roll No. e23eceu0005
-- Vipin Yadav - Roll No. e23cseu1728
-- Yajat Gupta - Roll No. e23cseu1881
+- Manthan - E23CSEU1831
+- Mohit Marwah - E23CSEU1848
+- Yajat Gupta - E23CSEU1881 
 
 ## License
 
