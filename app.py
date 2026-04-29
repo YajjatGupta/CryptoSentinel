@@ -153,6 +153,31 @@ def run_sarima_forecast(y_train, forecast_steps):
     model_label = "SARIMA(1,1,1)(1,0,1,24)" if seasonal_order != (0, 0, 0, 0) else "ARIMA(1,1,1)"
 
     try:
+        y_train = y_train.dropna()
+        if len(y_train) < 10:
+            return None, f"{model_label} failed: not enough non-null training samples"
+
+        # CoinGecko timestamps are not guaranteed to be perfectly regular, and pandas can lose
+        # `.freq` through filtering operations. Statsmodels increasingly requires a supported
+        # index with frequency for prediction/forecasting.
+        if isinstance(y_train.index, pd.DatetimeIndex) and y_train.index.tz is not None:
+            y_train = y_train.copy()
+            y_train.index = y_train.index.tz_convert(None)
+
+        freq = None
+        if isinstance(y_train.index, pd.DatetimeIndex) and len(y_train.index) >= 3:
+            freq = pd.infer_freq(y_train.index)
+            if freq is None:
+                deltas = np.diff(y_train.index.asi8)
+                if deltas.size:
+                    median_ns = int(np.median(deltas))
+                    if median_ns > 0:
+                        freq = pd.to_timedelta(median_ns, unit="ns")
+
+        if freq is not None:
+            regular_index = pd.date_range(start=y_train.index[0], periods=len(y_train), freq=freq)
+            y_train = pd.Series(y_train.to_numpy(dtype=float), index=regular_index, name=y_train.name)
+
         model = SARIMAX(
             y_train,
             order=(1, 1, 1),
@@ -264,6 +289,7 @@ def build_forecasting_frame(df, lag_count=12):
     forecast_df = df.copy()
     forecast_df.set_index('date', inplace=True)
     forecast_df.sort_index(inplace=True)
+    forecast_df = forecast_df[~forecast_df.index.duplicated(keep='last')]
     forecast_df.ffill(inplace=True)
 
     forecast_df['return_1'] = forecast_df['value'].pct_change().replace([np.inf, -np.inf], np.nan)

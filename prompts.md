@@ -1,4 +1,4 @@
-# Shubham Tandon's Prompts
+# Yajat Gupta's Prompts
 
 1.Act as a senior software engineer and data scientist. I have a Flask backend script, app.py, for a project called CryptoSentinel. Explain the entire data processing and analysis pipeline in detail.
 Your explanation should cover:
@@ -28,7 +28,7 @@ Types of Anomalies: Based on the graphs, describe the types of anomalies each mo
 Logical Standpoint: Evaluate the 'Actual Price' (blue line) vs. the 'Reconstruction' (red line) in both graphs. From a logical standpoint, does each model's reconstruction make sense in the context of anomaly detection? Which model's reconstruction seems to better represent "normal" behavior?
 Overall Performance: Based on the visual evidence, which model do you believe does a better job of detecting anomalies and why? Support your answer with specific observations from the provided images.
 Please use a table or a clear, side-by-side comparison to present your findings
-# Vipin Yadav's Prompts
+# Yajat Gupta's Prompts
 1.Project Re-branding and Core Objective
 Objective: Re-brand the existing "Web3Guard" platform for a new hackathon, defining the project's core purpose.
 

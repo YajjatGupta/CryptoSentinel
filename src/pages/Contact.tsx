@@ -62,7 +62,7 @@ const ContactPage = () => {
                     <Input 
                       id="name" 
                       required 
-                      placeholder="Vipin Yadav"
+                      placeholder="Yajat Gupta"
                       className="bg-white/5"
                     />
                   </div>
